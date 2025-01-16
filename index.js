@@ -158,7 +158,7 @@ for (let i = 0; i < sayilar.length; i++) {
 let keys = Object.keys(object);
 for (let i = 0; i < keys.length; i++) {
   let sayi = keys[i];
-  if (keys[i] > 1) {
+  if (object[sayi] > 1) {
     tekraredensayilar.push(`${sayi} sayısı ${object[sayi]} kere tekrar edilmiştir`)
   }
 }
