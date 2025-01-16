@@ -147,12 +147,23 @@ console.log(siralisayilar);
 */
 let object = {};
 for (let i = 0; i < sayilar.length; i++) {
-  for (let j = i + 1; j < sayilar.length; i++) {
-    if (sayilar[i] === sayilar[j]) {
-    
-    }
+  let sayi = sayilar[i];
+  if (object[sayi]) {
+    object[sayi]++
+  } else {
+    object[sayi] = 1
   }
 }
+
+let keys = Object.keys(object);
+for (let i = 0; i < keys.length; i++) {
+  let sayi = keys[i];
+  if (keys[i] > 1) {
+    tekraredensayilar.push(`${sayi} sayısı ${object[sayi]} kere tekrar edilmiştir`)
+  }
+}
+  
+
 console.log(tekraredensayilar);
 
 
